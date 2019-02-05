@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>JQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script>
+
+
+$(document).ready(function () {
+		
+		
+			$('#form1').validate({
+				rules:{
+					first_name:{
+						required:true,
+						minlength:5
+					
+					},
+					
+					last_name:{
+						required:true,
+						minlength:3
+					
+					},
+					
+					email:{
+						required:true,
+						minlength:10
+					},
+					phone_no:{
+					        required:true,
+							minlength:10
+							},
+					
+					
+					},
+				
+					 submitHandler: function (form1) { // for demo
+						$.alert({
+									title: 'Alert!',
+									content: 'data received!',
+								});
+					}
+					
+				
+				
+			
+			
+			
+			})
+		
+		
+		
+		});
+</script>
+
+
+</head>
+<body>
+<p id="errors">  </p>
+<form id="form1">
+	
+		First Name : <input type="text" name="first_name"> <br><br>
+		
+		Last Name : <input type="text" name="last_name"> <br><br>
+		
+		email: <input type="text" name="email"> <br><br>
+		
+		phone-no: : <input type="text" name="phone_no"> <br><br>
+		
+		<input type="submit" id="submitBtn" >
+	
+	</form>
+
+
+</body>
+</html>

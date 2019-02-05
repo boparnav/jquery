@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>JQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(()=>{
+
+    $('#submitbtn').click(function(){
+		var first_name=$('#first_name').val();
+		var last_name=$('#last_name').val();
+		   console.log(first_name);
+			if (first_name=="" ||last_name==""){
+					$('#errors').text(' please enetr valid data');
+					$('#errors').css('color','red');
+					}
+					else
+					{
+					$('#errors').text(' data reeived');
+					$('#errors').css('color','green');
+					
+					}
+					return false;
+	   });
+ 
+ });
+ 
+</script>
+
+
+</head>
+<body>
+<p id="errors">  </p>
+<form>
+ FirstName:
+  <input type="text" id="first_name">
+  <br>
+  LastName:
+  <input type="text" id="last_name">
+   <br>
+  
+  
+  <br><br>
+  <input type="submit" value="Submit" id="submitbtn">
+</form>
+
+
+</body>
+</html>
